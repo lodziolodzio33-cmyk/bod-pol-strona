@@ -1,0 +1,12 @@
+BOD-POL – instrukcja uruchomienia
+
+1. Otwórz index.html w przeglądarce i obejrzyj stronę.
+2. FORMULARZ NIE JEST AKTYWNY DOPÓKI NIE PODASZ ADRESU E-MAIL.
+3. Otwórz index.html w edytorze tekstowym, znajdź WPISZ_TUTAJ_EMAIL i zastąp swoim adresem e-mail.
+4. Formularz wysyła do zewnętrznego FormSubmit. Sprawdź obsługę załączników i aktualne warunki usługi, następnie przetestuj wysyłkę. FormSubmit może wymagać potwierdzenia adresu e-mail. Nie publikuj formularza bez testu.
+5. Przed publikacją zweryfikuj tekst polityki prywatności i sposób przetwarzania danych przez dostawcę.
+6. Aby dodać zdjęcia realizacji, skopiuj je do folderu i dodaj znacznik <img src="moje-zdjecie.jpg" alt="Opis realizacji"> w sekcji galerii w index.html. Nie wykorzystuj cudzych zdjęć bez zgody.
+7. Publikacja: Cloudflare Pages -> utwórz projekt -> Direct Upload -> prześlij cały folder lub ZIP.
+8. Przy kolejnych zmianach wgraj zaktualizowane pliki do tego samego projektu.
+9. Potwierdź NIP przed umieszczeniem na stronie: materiały promocyjne i publiczne katalogi podają różne wartości.
+10. Link Google jest umieszczony w sekcji opinii, ale nie udało się pobrać zdjęć ani treści opinii.

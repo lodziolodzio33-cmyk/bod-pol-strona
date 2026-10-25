@@ -1,0 +1,40 @@
+{
+  "headline": "Solidnie. Terminowo. W dobrej cenie.",
+  "intro": "Bramy, ogrodzenia, transport, przeprowadzki, układanie kostki brukowej i usługi minikoparką. Masz robotę do zrobienia? Zadzwoń – wycenimy!",
+  "phone1": "537 306 468",
+  "phone2": "668 117 621",
+  "address": "Jakubowice 3, 46-250 Wołczyn",
+  "area": "Powiat kluczborski i okolice",
+  "services": [
+    {
+      "title": "Bramy",
+      "description": "Prace związane z bramami i wjazdami na posesje.",
+      "icon": "🚪"
+    },
+    {
+      "title": "Ogrodzenia",
+      "description": "Usługi przy ogrodzeniach posesji i działek.",
+      "icon": "▥"
+    },
+    {
+      "title": "Transport",
+      "description": "Przewóz ładunków po wcześniejszym ustaleniu szczegółów.",
+      "icon": "🚚"
+    },
+    {
+      "title": "Przeprowadzki",
+      "description": "Pomoc w przewozie mienia i organizacji przeprowadzki.",
+      "icon": "📦"
+    },
+    {
+      "title": "Kostka brukowa",
+      "description": "Układanie kostki brukowej na podjazdach i wokół posesji.",
+      "icon": "▦"
+    },
+    {
+      "title": "Minikoparka",
+      "description": "Prace ziemne i wykopy z użyciem minikoparki.",
+      "icon": "🚜"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+BOD-POL – panel edycji bez programowania (Pages CMS)
+
+1. Załóż konto na github.com i utwórz repozytorium (może być prywatne).
+2. Rozpakuj ZIP i prześlij WSZYSTKIE pliki, łącznie z ukrytym .pages.yml, do katalogu głównego repozytorium. GitHub: Add file -> Upload files. Sprawdź, czy .pages.yml trafił do repozytorium.
+3. Wejdź na https://app.pagescms.org/, zaloguj się przez GitHub i zainstaluj aplikację Pages CMS z dostępem tylko do tego repozytorium.
+4. Otwórz repozytorium w Pages CMS. Sekcja „Dane firmy i usługi” umożliwia edycję tekstów i usług. Sekcja „Galeria zdjęć” umożliwia dodawanie pozycji i przesyłanie zdjęć. Zapisz zmiany.
+5. W Cloudflare: Workers & Pages -> Create -> Pages -> Connect to Git -> wskaż repozytorium GitHub. Ustaw framework: None, build command: puste, output directory: / (lub . zgodnie z interfejsem). Uruchom wdrożenie.
+6. Zmiany zapisane w Pages CMS trafiają do GitHub; po połączeniu Cloudflare z repozytorium strona powinna wdrożyć się automatycznie.
+
+UWAGA: plik index.html otwierany bezpośrednio z dysku (file://) nie wczyta dynamicznych danych JSON. Testuj na opublikowanej stronie albo przez lokalny serwer.
+Formularz wyceny pozostaje nieaktywny do podania adresu e-mail w stałej FORM_EMAIL w index.html i aktywacji usługi FormSubmit. Zweryfikuj jej aktualne limity plików, zgodność z wymaganiami prywatności i przetestuj wysyłkę przed publikacją.
+Nie dodano zdjęć ani opinii z Google – nie uzyskano dostępu do oryginałów.
