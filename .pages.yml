@@ -1,0 +1,42 @@
+
+media:
+  input: media
+  output: /media
+
+content:
+  - name: site
+    label: Dane i treści strony
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: title
+        label: Tytuł strony
+        type: string
+      - name: description
+        label: Opis strony
+        type: text
+      - name: phone1
+        label: Telefon 1
+        type: string
+      - name: phone2
+        label: Telefon 2
+        type: string
+
+  - name: gallery
+    label: Galeria zdjęć
+    type: file
+    path: content/gallery.json
+    format: json
+    fields:
+      - name: images
+        label: Zdjęcia
+        type: object
+        list: true
+        fields:
+          - name: image
+            label: Plik zdjęcia
+            type: image
+          - name: caption
+            label: Opis zdjęcia
+            type: string
