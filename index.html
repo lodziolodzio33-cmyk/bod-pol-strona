@@ -14,7 +14,60 @@
 <div class="card"><div class="symbol">📦</div><h3>Przeprowadzki</h3><p>Pomoc w przewozie mienia i organizacji przeprowadzki.</p></div>
 <div class="card"><div class="symbol">▦</div><h3>Kostka brukowa</h3><p>Układanie kostki brukowej na podjazdach i wokół posesji.</p></div>
 <div class="card"><div class="symbol">🚜</div><h3>Minikoparka</h3><p>Prace ziemne i wykopy z użyciem minikoparki.</p></div></div></div></section>
-<section id="galeria"><div class="wrap"><div class="eyebrow">BOD-POL</div><h2>Zobacz naszą ofertę</h2><div class="gallery" id="galleryGrid"><img loading="lazy" src="oferta.webp" alt="Oferta BOD-POL – bramy, ogrodzenia, kostka i minikoparka"><img loading="lazy" src="ulotka.webp" alt="Ulotka informacyjna BOD-POL"></div><p class="note">Materiały promocyjne. Galerię można później zastąpić zdjęciami wykonanych realizacji.</p></div></section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="eyebrow">BOD-POL</div>
+    <h2>Nasze realizacje</h2>
+    <div class="gallery" id="galleryGrid">
+      <p>Ładowanie zdjęć...</p>
+    </div>
+  </div>
+</section>
+
+<script>
+async function loadGallery() {
+  const gallery = document.getElementById("galleryGrid");
+
+  try {
+    const response = await fetch("/content/gallery.json", {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error("Nie udało się pobrać galerii");
+    }
+
+    const data = await response.json();
+    gallery.innerHTML = "";
+
+    const images = Array.isArray(data.images) ? data.images : [];
+
+    if (images.length === 0) {
+      gallery.textContent = "Galeria jest na razie pusta.";
+      return;
+    }
+
+    images.forEach(item => {
+      if (!item.image) return;
+
+      const img = document.createElement("img");
+      img.src = item.image;
+      img.alt = item.caption || "Realizacja BOD-POL";
+      img.loading = "lazy";
+
+      gallery.appendChild(img);
+    });
+
+  } catch (error) {
+    console.error(error);
+    gallery.textContent = "Nie udało się załadować zdjęć.";
+  }
+}
+
+loadGallery();
+</script>
+
 <section id="opinie" class="services"><div class="wrap"><div class="eyebrow">Zaufanie</div><h2>Opinie klientów</h2><p class="muted">Sprawdź naszą wizytówkę Google, zobacz zdjęcia i podziel się swoją opinią po zakończeniu zlecenia.</p><div class="actions"><a class="btn" href="https://share.google/iHx9uaFt4sUFDyE9j" target="_blank" rel="noopener noreferrer">Zobacz wizytówkę Google ↗</a></div><p class="note">Nie publikujemy niezweryfikowanych ocen ani opinii. Opinie z Google mogą zostać dodane po ich potwierdzeniu.</p></div></section>
 <section id="wycena"><div class="wrap"><div class="eyebrow">Szybki kontakt</div><h2>Zapytaj o wycenę</h2><p class="muted">Opisz zlecenie i dołącz zdjęcia miejsca pracy. Odezwiemy się, aby ustalić szczegóły.</p><div class="formbox"><form id="quoteForm" enctype="multipart/form-data" method="POST"><input type="hidden" name="_subject" value="Nowe zapytanie ze strony BOD-POL"><input type="hidden" name="_captcha" value="true"><div class="formgrid"><label>Imię i nazwisko<input name="name" required maxlength="100" autocomplete="name" placeholder="Jan Kowalski"></label><label>Telefon<input name="phone" type="tel" required maxlength="25" autocomplete="tel" placeholder="500 000 000"></label><label>Adres e-mail (opcjonalnie)<input name="email" type="email" maxlength="150" autocomplete="email" placeholder="twoj@email.pl"></label><label>Miejscowość<input name="location" required maxlength="100" placeholder="Np. Kluczbork"></label><label>Rodzaj usługi<select name="service" required><option value="">Wybierz usługę</option><option>Bramy</option><option>Ogrodzenia</option><option>Transport</option><option>Przeprowadzki</option><option>Kostka brukowa</option><option>Usługi minikoparką</option><option>Inna usługa</option></select></label><label>Zdjęcia (do 3 plików, JPG/PNG/PDF)<input id="photos" name="attachment" type="file" accept="image/jpeg,image/png,application/pdf" multiple></label></div><label>Opis zlecenia<textarea name="message" rows="5" required maxlength="3000" placeholder="Co trzeba wykonać? Podaj wymiary, termin lub inne ważne informacje."></textarea></label><label class="check"><input type="checkbox" required name="consent" value="tak"> Zapoznałem/am się z <a href="polityka-prywatnosci.html" target="_blank">informacją o prywatności</a> i zgadzam się na kontakt w sprawie mojego zapytania.</label><p class="note">Przed wysłaniem sprawdź, czy nie dołączasz zdjęć zawierających zbędne dane osobowe. Maksymalnie 3 pliki po 5 MB. Formularz wymaga aktywacji przez właściciela strony.</p><button class="btn" type="submit">Wyślij zapytanie</button><p id="formStatus" role="status" aria-live="polite"></p></form></div></div></section>
 <section class="contact" id="kontakt"><div class="wrap contact-grid"><div><div class="eyebrow">Skontaktuj się</div><h2>Masz robotę do zrobienia?</h2><p class="lead">Zadzwoń, opowiedz o zleceniu – ustalimy szczegóły i wycenę.</p><div class="phones"><a href="tel:+48537306468">☎ 537 306 468</a><a href="tel:+48668117621">☎ 668 117 621</a></div></div><div class="details"><h3>BOD-POL – Krzysztof Boduch</h3><p>📍 Jakubowice 3<br>46-250 Wołczyn</p><p>📍 Obszar działania: powiat i okolice</p><p>NIP: do potwierdzenia</p><a class="btn" href="sms:+48537306468">Wyślij SMS</a></div></div></section></main>
