@@ -69,41 +69,37 @@ loadGallery();
 </script>
 
 <section id="opinie" class="services"><div class="wrap"><div class="eyebrow">Zaufanie</div><h2>Opinie klientów</h2><p class="muted">Sprawdź naszą wizytówkę Google, zobacz zdjęcia i podziel się swoją opinią po zakończeniu zlecenia.</p><div class="actions"><a class="btn" href="https://share.google/iHx9uaFt4sUFDyE9j" target="_blank" rel="noopener noreferrer">Zobacz wizytówkę Google ↗</a></div><p class="note">Nie publikujemy niezweryfikowanych ocen ani opinii. Opinie z Google mogą zostać dodane po ich potwierdzeniu.</p></div></section>
-<section id="wycena"><div class="wrap"><div class="eyebrow">Szybki kontakt</div><h2>Zapytaj o wycenę</h2><p class="muted">Opisz zlecenie i dołącz zdjęcia miejsca pracy. Odezwiemy się, aby ustalić szczegóły.</p><div class="formbox"><form id="quoteForm" enctype="multipart/form-data" method="POST"><input type="hidden" name="_subject" value="Nowe zapytanie ze strony BOD-POL"><input type="hidden" name="_captcha" value="true"><div class="formgrid"><label>Imię i nazwisko<input name="name" required maxlength="100" autocomplete="name" placeholder="Jan Kowalski"></label><label>Telefon<input name="phone" type="tel" required maxlength="25" autocomplete="tel" placeholder="500 000 000"></label><label>Adres e-mail (opcjonalnie)<input name="email" type="email" maxlength="150" autocomplete="email" placeholder="twoj@email.pl"></label><label>Miejscowość<input name="location" required maxlength="100" placeholder="Np. Kluczbork"></label><label>Rodzaj usługi<select name="service" required><option value="">Wybierz usługę</option><option>Bramy</option><option>Ogrodzenia</option><option>Transport</option><option>Przeprowadzki</option><option>Kostka brukowa</option><option>Usługi minikoparką</option><option>Inna usługa</option></select></label><label>Zdjęcia (do 3 plików, JPG/PNG/PDF)<input id="photos" name="attachment" type="file" accept="image/jpeg,image/png,application/pdf" multiple></label></div><label>Opis zlecenia<textarea name="message" rows="5" required maxlength="3000" placeholder="Co trzeba wykonać? Podaj wymiary, termin lub inne ważne informacje."></textarea></label><label class="check"><input type="checkbox" required name="consent" value="tak"> Zapoznałem/am się z <a href="polityka-prywatnosci.html" target="_blank">informacją o prywatności</a> i zgadzam się na kontakt w sprawie mojego zapytania.</label><p class="note">Przed wysłaniem sprawdź, czy nie dołączasz zdjęć zawierających zbędne dane osobowe. Maksymalnie 3 pliki po 5 MB. Formularz wymaga aktywacji przez właściciela strony.</p><button class="btn" type="submit">Wyślij zapytanie</button><p id="formStatus" role="status" aria-live="polite"></p></form></div></div></section>
+<section id="wycena"><div class="wrap"><div class="eyebrow">Szybki kontakt</div><h2>Zapytaj o wycenę</h2><p class="muted">Opisz zlecenie i dołącz zdjęcia miejsca pracy. Odezwiemy się, aby ustalić szczegóły.</p><div class="formbox"><form id="quoteForm"
+      action="https://formspree.io/f/xyeeeywj"
+      method="POST"
+      enctype="multipart/form-data"><input type="hidden" name="_subject" value="Nowe zapytanie ze strony BOD-POL"><input type="hidden" name="_captcha" value="true"><div class="formgrid"><label>Imię i nazwisko<input name="name" required maxlength="100" autocomplete="name" placeholder="Jan Kowalski"></label><label>Telefon<input name="phone" type="tel" required maxlength="25" autocomplete="tel" placeholder="500 000 000"></label><label>Adres e-mail (opcjonalnie)<input name="email" type="email" maxlength="150" autocomplete="email" placeholder="twoj@email.pl"></label><label>Miejscowość<input name="location" required maxlength="100" placeholder="Np. Kluczbork"></label><label>Rodzaj usługi<select name="service" required><option value="">Wybierz usługę</option><option>Bramy</option><option>Ogrodzenia</option><option>Transport</option><option>Przeprowadzki</option><option>Kostka brukowa</option><option>Usługi minikoparką</option><option>Inna usługa</option></select></label><label>Zdjęcia (do 3 plików, JPG/PNG/PDF)<input id="photos" name="attachment" type="file" accept="image/jpeg,image/png,application/pdf" multiple></label></div><label>Opis zlecenia<textarea name="message" rows="5" required maxlength="3000" placeholder="Co trzeba wykonać? Podaj wymiary, termin lub inne ważne informacje."></textarea></label><label class="check"><input type="checkbox" required name="consent" value="tak"> Zapoznałem/am się z <a href="polityka-prywatnosci.html" target="_blank">informacją o prywatności</a> i zgadzam się na kontakt w sprawie mojego zapytania.</label><p class="note">Przed wysłaniem sprawdź, czy nie dołączasz zdjęć zawierających zbędne dane osobowe. Maksymalnie 3 pliki po 5 MB. Formularz wymaga aktywacji przez właściciela strony.</p><button class="btn" type="submit">Wyślij zapytanie</button><p id="formStatus" role="status" aria-live="polite"></p></form></div></div></section>
 <section class="contact" id="kontakt"><div class="wrap contact-grid"><div><div class="eyebrow">Skontaktuj się</div><h2>Masz robotę do zrobienia?</h2><p class="lead">Zadzwoń, opowiedz o zleceniu – ustalimy szczegóły i wycenę.</p><div class="phones"><a href="tel:+48537306468">☎ 537 306 468</a><a href="tel:+48668117621">☎ 668 117 621</a></div></div><div class="details"><h3>BOD-POL – Krzysztof Boduch</h3><p>📍 Jakubowice 3<br>46-250 Wołczyn</p><p>📍 Obszar działania: powiat i okolice</p><p>NIP: do potwierdzenia</p><a class="btn" href="sms:+48537306468">Wyślij SMS</a></div></div></section></main>
 <footer><div class="wrap">© <span id="year"></span> BOD-POL Krzysztof Boduch • Solidnie • Terminowo • W dobrej cenie</div></footer><script>document.getElementById('year').textContent=new Date().getFullYear();
 const FORM_EMAIL='WPISZ_TUTAJ_EMAIL';
-const quote=document.getElementById('quoteForm');
-quote.addEventListener('submit',function(e){
- const status=document.getElementById('formStatus');
- const files=document.getElementById('photos').files;
- if(files.length>3 || Array.from(files).some(f=>f.size>5*1024*1024)){e.preventDefault();status.textContent='Wybierz maksymalnie 3 pliki, każdy do 5 MB.';return;}
- if(FORM_EMAIL==='WPISZ_TUTAJ_EMAIL'){e.preventDefault();status.textContent='Formularz oczekuje na konfigurację adresu e-mail przez właściciela. Na razie prosimy o kontakt telefoniczny.';return;}
- quote.action='https://formsubmit.co/'+encodeURIComponent(FORM_EMAIL);
-});</script>
-<script>
-// Edytowane w Pages CMS pliki JSON są automatycznie odczytywane po publikacji.
-const escapeHtml = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const phoneHref = s => 'tel:+48'+String(s||'').replace(/\D/g,'');
-async function loadCMS(){
- try {
-  const response=await fetch('/content/site.json',{cache:'no-store'});
-  if(!response.ok) throw Error('Brak danych CMS');
-  const data=await response.json();
-  if(data.headline) document.getElementById('heroHeadline').textContent=data.headline;
-  if(data.intro) document.getElementById('heroIntro').textContent=data.intro;
-  if(Array.isArray(data.services)) document.getElementById('serviceCards').innerHTML=data.services.map(s=>`<div class="card"><div class="symbol">${escapeHtml(s.icon)}</div><h3>${escapeHtml(s.title)}</h3><p>${escapeHtml(s.description)}</p></div>`).join('');
-  const phones=document.querySelectorAll('.phones a');
-  [data.phone1,data.phone2].forEach((n,i)=>{if(n&&phones[i]){phones[i].href=phoneHref(n);phones[i].textContent='☎ '+n;}});
-  if(data.address){const address=document.querySelector('.details p');if(address)address.textContent='📍 '+data.address;}
-  if(data.area){const area=document.querySelectorAll('.details p')[1];if(area)area.textContent='📍 '+data.area;}
- } catch(e){console.warn('Wczytanie danych CMS:',e.message);}
- try{
-  const r=await fetch('/content/gallery.json',{cache:'no-store'});
-  if(!r.ok) return;
-  const items=await r.json();
-  if(Array.isArray(items)&&items.length) document.getElementById('galleryGrid').innerHTML=items.map(g=>`<figure style="margin:0"><img loading="lazy" src="${escapeHtml(g.image)}" alt="${escapeHtml(g.title)}"><figcaption class="note">${escapeHtml(g.title)}</figcaption></figure>`).join('');
- }catch(e){console.warn('Galeria CMS:',e.message);}
+const quote=
+const quote = document.getElementById('quoteForm');
+
+quote.addEventListener('submit', function(e) {
+  const status = document.getElementById('formStatus');
+  const files = document.getElementById('photos').files;
+
+  status.textContent = '';
+
+  if (files.length > 3 ||
+      Array.from(files).some(file => file.size > 5 * 1024 * 1024)) {
+    e.preventDefault();
+    status.textContent =
+      'Wybierz maksymalnie 3 pliki, każdy do 5 MB.';
+    return;
+  }
+
+  if (files.length > 0) {
+    e.preventDefault();
+    status.textContent =
+      'Wysyłanie zdjęć nie jest jeszcze aktywne. Usuń załączniki i wyślij zapytanie bez zdjęć.';
+  }
+});
+
 }
 loadCMS();
 </script></body></html>
